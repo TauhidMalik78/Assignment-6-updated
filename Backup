@@ -1,0 +1,34 @@
+if (scan->ptr == nullptr){
+				if (data < scan->data) {
+					temp->ptr = first;
+					first = temp;
+					temp = nullptr;
+					printList();
+					break;
+				}
+				else {
+					
+					last->ptr = temp;
+					last = temp;
+					temp = nullptr;
+					printList();
+					break;
+				}
+				
+			}
+
+			else if ((data > scan->data) && (data < scan->ptr->data)) {
+
+				temp->ptr = scan->ptr;
+				scan->ptr = temp;
+				temp = nullptr;
+				printList();
+				break;
+			}
+			
+			else if (data == scan->data) {
+				temp->ptr = scan->ptr;
+				scan->ptr = temp;
+				temp = nullptr;
+				printList();
+				break;
